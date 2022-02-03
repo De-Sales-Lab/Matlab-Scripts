@@ -1,0 +1,290 @@
+Load in Toolboxes
+Climate Data Toolbox
+Mapping Toolbox
+Custom colormap
+Statistics and machine learning toolbox
+PeterRochford/SkillMetricsToolbox
+
+Load in files
+Pr, hfls, SSP585, obs, et
+Line 292
+ORRRRRR
+
+Load in cropped files (line 391)
+Make sure to run repeating day matrices for UDEL/CHIRPS
+Turn lat/lon into grid
+Redo mask (line 552)
+Get NAZ/SAZ time series values (line 1563)
+Redo stats RMSE/BIAS/CCOEF (Line 2221)
+Redo taylor statistics (line 5751) and plot (line 6177)
+
+Load in already cropped files
+Line 391
+
+Turn on lat/lon into grid
+Line 406
+
+Load basic image of mean pr/et (not cropped)
+409
+
+Mask out ocean
+Line 454
+
+Plots of annual mean
+Line 502
+
+Create shapefile mask
+Line 532
+
+Crop shapefile
+Line626
+
+Create repeating day vector/matrix
+Go from mm/month to mm/day
+Line 701
+
+Cropped mean plots with contour
+Mean, std,  rmse
+RMSE is 829
+Line 767
+
+Bias plots (pr, et)
+Line 911
+
+RMSE plots
+RMSE line 829
+
+MFC plot
+Pr - ET
+Line 938  & 1008
+
+EOF analysis
+Line 981
+But use ceof_test.m for updated eof analysis
+
+El Nino and La Nina
+Line1443
+
+Time series of crop(s)
+Line1514
+
+NAZ/SAZ for hist and ssp585
+Plot annual cycles
+Line 1601
+
+Annual cycle NAZ and SAZ
+Ssp585
+Line 1777
+
+Mean, std (All crops)
+Line 1810
+
+Legal, NAZ, SAZ
+Use this for rmse plots
+RMSE/Bias and RMSE/ccoef plots
+Line 1960
+
+Use these for plots
+Linear regression model ssp585
+Line 2128
+
+Mean, std ssp585
+Mean, std for 2051-2070 and 2081-2100
+Line 2128
+
+Ssp585 models in 3d matrix
+Line 2198
+
+Bias, r2, rmse, SAZ/NAZ
+With CHIRPS as ref
+New method for rmse/bias rmse/ccoef plots (line 1960)
+Line 2221
+
+Spatial corr
+Line 2389
+Line 2402
+Line 2565
+Line 3102
+
+Anomaly plot
+CHIRPS as ref time series
+Lags
+Line 2469
+
+Zero-phase corr of anomalies plot
+CHIRPS ref
+Line 2509
+
+Rsq (percent var) in grid w/ts
+With ref time series
+Line 2541
+
+Hist/future analysis
+Load in *c.mat from hist/ssp585
+The entire script for analysis (load-in, start dates, lat/lon, etc)
+Line 2586
+
+Mean/std for hist/future
+Line 2641
+
+Ttest
+Line 2790
+
+Difference plots
+Line 2837
+
+Relative diff plots (mean)
+Line 2865
+
+Relative diff plots (std)
+2886
+
+Relative diff Dry vs. wet season ttest
+Line 2944
+
+ACC
+Line 3126
+Timestamps of years (*pr) (not *c)
+%1979(1:12) 1980(13:24) 1981(25:36) 1982(37:48) 1983(49:60) 1984(61:72)
+%1985(73:84) 1986(85:96) 1987(97:108) 1988(109:120) 1989(121:132)
+%1990(133:144) 1991(145:156) 1992(157:168) 1993(169:180) 1994(181:192)
+%1995(193:204) 1996(205:216) 1997(217:228) 1998(229:240) 1999(241:252)
+%2000(253:264) 2001(265:276) 2002(277:288) 2003(289:300) 2004(301:312)
+%2005(313:324) 2006(325:336) 2007(337:348) 2008(349:360) 2009(361:372)
+%2010(373:384) 2011(385:396) 2012(397:408) 2013(409:420) 2014(421:432)
+Line 3169
+
+Dry season
+Using timetable and retime
+Old method
+Line 3222
+
+Dry season ts plot + trend
+Line 3711
+Trend
+Polyplot
+Line 3760
+
+[tr p] = trend(model, timevector)
+Stats
+Line3599
+
+Old method
+Corrcoef, bias, mean, target_stats
+Dry/wet season N/SAZ (hist)
+Use this method
+Line 3830
+
+Dry/wet NAZ/SAZ ts plot
+Line 4185
+
+Dry/wet NAZ/SAZ trend/mean/std
+Line 4372
+
+Bar plots
+Line 4484
+
+CDF plots
+Line 4608
+
+Dry/wet NAZ/SAZ trend plot
+Line 4451
+
+Historical and ssp585
+Dry/wet season N/SAZ (585)
+Have to complete this
+Line 4489
+
+And then to complete NAZ/SAZ wet/dry analysis
+Go to line ~4923
+
+This is after the ensemble plot of the entire future
+Ribbon Future ts plot 2050-2100 ribbon
+Ensemble mean + ribbon
+No NAZ/SAZ masks, entire domain
+Line 5167
+
+Get time series of cropped files (must go through the entire process of removing ocean and shapefile crop)
+Plot on 5212
+
+Also for Rondonia
+‘EnsembleMeants585Rondonia’
+Histogram hist/future prec for entire domain
+Line 5320 - 5417
+
+Load in cropped c files in the beginning
+Get EnsembleMeants8mod for historic line1682 and then come here and get the annual mean
+Get monthly histogram 
+Line 5374
+
+NAZ/SAZ future ts, no season
+Line 4924
+
+Future trend plots wet/dry, no mask
+Line 4955
+
+BACK TO Dry/wet N/SAZ (585)
+Line 4988
+
+Data was loaded, the seasons defined, and extracted in dry/wet season N/SAZ
+NAZ dry: JAS SAZ dry: JJA
+NAZ wet: MAM SAZ wet: DJF
+Lines 4722 (Future wet/dry season)
+cdry[N/SAZ]585
+crainy[N/SAZ]585
+Matrix is 220 x 261 x 153
+Nt585 = 153
+
+Seasonal mean plots
+Line 4740
+
+Dry season variance plots
+Line 4770
+
+Dry season mean + var plot
+Line 4796
+
+Annual pr ts from monthly ts
+Using timetable and retime
+Old method
+Line 4810
+
+Annual ts plot from monthly ts
+Line 4921
+
+Taylor stats
+Uses taylor_statistics for taylor diagram
+Must be a time series
+Line 5705
+
+Create arrays with taylor stats for diagram
+Line 5158
+
+Ccoef, crmsd, sdev, ID
+This is on line 5780 for NAZ/SAZ
+Taylor diagram
+Line 5346
+
+Taylor skill score bar graph
+Line 6177
+
+MFC split analysis
+Load in cropped files 
+[mod]c is cropped PR
+[mod]hfls is not cropped
+GLDASprc is cropped PR (meaning cropped for ocean and legal amazon)
+For GLDASet, load in and then mask out ocean and legal amazon (must load in shapefile)
+Mask GLDASetc and models
+Get 34 year mean (25:432) for GLDASetc
+Get ts mean for pr and et NAZ and SAZ (4 averages)
+Line 1514
+
+Get mean of spatial average for NAZ and SAZ
+>mean(GLDASettsNAZ)
+Starts on line 1568
+MFC barplot
+Line 6253
+
+
+Erase:
+
