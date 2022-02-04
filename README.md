@@ -1,6 +1,10 @@
 # Matlab-Scripts
 Programs in MATLAB  to handle nc, shapefiles, etc.
 
+/Validation scripts: includes scripts to calculate model bias and RMSE (WRF-ERA5 with CHIRPS and UDEL as obs)
+![WRFphys_pr_bias](https://user-images.githubusercontent.com/83616016/152476499-cbf410a0-8a30-4c40-9834-a2348bddb4a3.png)
+![WRFphys_t2_rmse](https://user-images.githubusercontent.com/83616016/152476509-3a365b0f-e9a5-44c6-926a-aa69f4ae5d1d.png)
+
 /Amazon_CMIP6 analysis subfolder: contains a script with MANY different ways to anlayze climate data: ribbon plots; dry/wet season CDFs; seasonal mean plots; anomalies; mean/std; taylor stats; etc.
 ![Taylor_p_new](https://user-images.githubusercontent.com/83616016/152448065-dc159de3-cd65-46d1-985c-ae9ea0e8a273.png)
 ![Skill Score_NAZ](https://user-images.githubusercontent.com/83616016/152448070-4c4d0adf-941c-4a6c-8619-52b8e630c60d.png)
